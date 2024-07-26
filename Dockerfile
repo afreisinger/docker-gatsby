@@ -1,0 +1,15 @@
+FROM node:20.10.0-slim
+
+RUN apt-get update && \
+    apt-get install -y git curl procps && \
+    git config --global --add safe.directory /site && \
+    npm install -g gatsby-cli typescript vercel netlify-cli && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /site
+
+# Put this into separate layer so that changes in setup.sh don't cause NPM install.
+COPY setup.sh /usr/bin
+RUN chmod u+x /usr/bin/setup.sh
+
+ENTRYPOINT ["/usr/bin/setup.sh"]
