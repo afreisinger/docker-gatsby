@@ -133,3 +133,4 @@ dist
 .venv/
 package-lock.json
 yarn.lock
+output/
