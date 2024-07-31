@@ -6,17 +6,11 @@ To build the image:
 make build
 ```
 
-To serve a site:
-
-```bash
-make develop
-```
-
 The Docker image can be found [here](https://hub.docker.com/repository/docker/afreisinger/gatsby/general).
 
-   Developing a Gatsby Site with Docker
+# Developing a Gatsby Site with Docker
 
-Test Site
+## Test Site
 ---------
 
 Let’s test this out using a sample Gatsby site.
@@ -47,7 +41,7 @@ The site files will be dumped to a `public` directory. You can then serve the si
     docker run -p 9000:9000 -v ${PWD}:/site --name gatsby afreisinger/gatsby:latest serve
     
 
-Debugging
+## Debugging
 ---------
 
 First launch a container with a BASH shell.
@@ -69,6 +63,3 @@ Running the Typescript compiler will allow you to see any warnings and errors.
 If there are any tests then these can also be run.
 
     yarn test
-    
-
-[](https://twitter.com/agfreisinger)[](https://github.com/afreisinger)[](https://gitlab.com/afreisinger)[](https://www.linkedin.com/in/afreisinger)
