@@ -63,3 +63,45 @@ Running the Typescript compiler will allow you to see any warnings and errors.
 If there are any tests then these can also be run.
 
     yarn test
+
+
+## Docker Compose
+---------
+
+Steps to Use Docker Compose
+
+Create a .env file in the same directory as your docker-compose.yml file to define default values for the environment variables.
+
+```env
+PORT_HOST=8000
+PORT_CONTAINER=8000
+```
+This file allows you to set default port values which docker-compose will use if no other values are provided.
+
+Build and Run the Container with the Default Command:
+```
+docker-compose up
+```
+
+Running Specific Commands
+To run specific commands when starting the container, use docker-compose run instead of docker-compose up. Here are some examples:
+
+Develop the Application:
+```
+docker-compose run gatsby develop
+```
+
+Build the Application:
+```
+docker-compose run gatsby build
+```
+
+Install Dependencies:
+```
+docker-compose run gatsby install
+```
+
+Serve the Application:
+```
+PORT_HOST=9000 PORT_CONTAINER=9000 docker-compose run gatsby serve
+```
