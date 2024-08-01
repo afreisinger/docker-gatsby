@@ -29,6 +29,6 @@ WORKDIR /site
 
 # Copy setup script
 COPY setup.sh /usr/bin
-RUN chmod u+x /usr/bin/setup.sh
+RUN chmod u+x /usr/bin/entrypoint.sh
 
-ENTRYPOINT ["/usr/bin/setup.sh"]
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]
