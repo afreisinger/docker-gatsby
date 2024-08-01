@@ -78,12 +78,12 @@ PORT_CONTAINER=8000
 ```
 This file allows you to set default port values which docker-compose will use if no other values are provided.
 
-Build and Run the Container with the Default Command:
+### Build and Run the Container with the Default Command:
 ```
 docker-compose up
 ```
 
-Running Specific Commands
+### Running Specific Commands
 To run specific commands when starting the container, use docker-compose run instead of docker-compose up. Here are some examples:
 
 Develop the Application:
